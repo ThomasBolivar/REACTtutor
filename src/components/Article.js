@@ -11,12 +11,16 @@ class Article extends Component{
         console.log(this.props);
         const body = this.state.isOpen && <section> {article.text}</section>;
         return(
-            <div>
+            <div className="card">
+                <div className="card-header">
                 <h2>
                     {article.title}
                     <button onClick={this.handleClick}> close </button>
                 </h2>
+                </div>
+                <div className = "card-body">
                 {body}
+                </div>
             </div>
         )
     }

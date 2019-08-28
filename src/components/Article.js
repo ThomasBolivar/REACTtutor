@@ -1,39 +1,50 @@
 import React, {Component} from 'react'
-class Article extends Component{
-    constructor(props){
+import "../components/static/css/styles.css"
+class Article extends Component {
+    constructor(props) {
         super(props);
         this.state = {
-            isOpen : false
+            isOpen: false
         };
     }
-    render (){
+    componentWillMount() {
+        console.log("componentWillMount called");
+    }
+
+    render() {
+        console.log("Rendering component Article");
         const {article} = this.props;
         console.log(this.props);
         const body = this.state.isOpen && <section> {article.text}</section>;
-        return(
-            <div className="card">
+        return (
+            <div className="card mx-auto" style = {{ width : "70%"}}>
                 <div className="card-header">
-                <h2>
-                    {article.title}
-                    <button onClick={this.handleClick}> close </button>
-                </h2>
+                    <h2>
+                        {article.title}
+                        <button onClick={this.handleClick} className="btn btn-warning float-right">
+                            {this.state.isOpen ? "close" : "open"} </button>
+                    </h2>
                 </div>
-                <div className = "card-body">
-                {body}
+                <div className="card-body">
+                    {body}
                 </div>
             </div>
         )
     }
-    handleClick =  ()=>{
+    componentDidMount() {
+        console.log("componentDidMount called"," I'm inside real DOM");
+    }
+
+
+    handleClick = () => {
         console.log("clicked");
         this.setState({
-            isOpen : !this.state.isOpen
+            isOpen: !this.state.isOpen
         })
 
 
     }
 }
-
 
 
 export default Article

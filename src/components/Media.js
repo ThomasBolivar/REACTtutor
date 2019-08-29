@@ -44,7 +44,7 @@ class Media extends Component {
     }
 
     /**
-     * After component arrives to real DOM you can call componentDidMount to do some things with a visual part
+     * After component arrives to real DOM you can call componentDidMount, you can make some addition state changes inside
      */
     componentDidMount() {
         setTimeout(() => {

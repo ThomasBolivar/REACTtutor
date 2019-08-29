@@ -1,13 +1,19 @@
-import React, { useState,useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 
 function Counter() {
-
+    /**
+     *  userState returns two values, that's why we need destructuring
+     */
     const [count, setCount] = useState(0);
+
+    /**
+     * userEffect is the componentDidMount, componentDidUpdate,  componentWillUnmount in one
+     * */
     useEffect(() => {
 
-        setTimeout(()=>{
+        setTimeout(() => {
             document.title = `Clicked ${count} times`;
-        },2000)
+        }, 500)
     });
     return (
         <div>
@@ -18,4 +24,5 @@ function Counter() {
         </div>
     );
 }
+
 export default Counter

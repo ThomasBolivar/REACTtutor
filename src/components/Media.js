@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import "../components/static/css/styles.css"
 import picture from '../components/static/images/React.js_logo-512.png'
+import ArticleList from "./ArticleList";
+import {simpleArray} from "../propExample";
 
 
 class Media extends Component {
@@ -37,6 +39,7 @@ class Media extends Component {
                      className={`rounded mx-auto d-block ${this.state.isTransparent ? this.changer[0] : this.changer[1]}`}
                      src={picture}
                      alt="fireSpot"/>
+
 
             </div>
 

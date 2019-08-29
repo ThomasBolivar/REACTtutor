@@ -3,6 +3,7 @@ import ArticleList from './ArticleList'
 import {simpleArray} from '../propExample'
 import 'bootstrap/dist/css/bootstrap.css'
 import "../components/static/css/styles.css"
+import Media from "./Media";
 
 class App extends Component {
 
@@ -12,9 +13,14 @@ class App extends Component {
         return (
             <div className="container mx-auto">
                 <div className="jumbotron">
-                    <h1 className="display-4"> Application name</h1>
+                    <h1 className="display-4"> Application with React</h1>
                 </div>
-                <ArticleList simpleArray={simpleArray}/>
+                <div>
+                    <Media/>
+                </div>
+                <div>
+                    <ArticleList simpleArray={simpleArray}/>
+                </div>
             </div>
 
         )

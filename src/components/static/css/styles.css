@@ -2,7 +2,7 @@ body {
 
     color: #8f8f8f;
     font: 12px Tahoma, sans-serif;
-    background: linear-gradient(0.25turn, #ffa900, #e8d4c1, #32b7d6);
+    background: linear-gradient(0.25turn,  #e8d4c1, #e8d4c1,  #e8d4c1);
 
     border-top: 5px solid #5f5f5f;
     border-left-style: groove;
@@ -53,12 +53,20 @@ nav a {
 nav ul {
     margin: 0;
     padding: 10%;
+
 }
 
 nav li {
     list-style-position: inside;
     font: 14px 'Oswald', sans-serif;
 
+
+}
+ul {
+
+}
+li{
+    background: linear-gradient(0.25turn,  #e8d4c1, #e8d4c1,  #e8d4c1);
 }
 
 .top-menu li {
@@ -99,7 +107,7 @@ nav li {
 
 h1 {
     display: inline-block;
-    color: #7e7e7e;
+    color: cornsilk;
     font: 40px/40px 'Oswald', sans-serif;
     margin: 0;
     padding: 0 10px;
@@ -172,15 +180,15 @@ blockquote cite {
     padding: 10px 5%;
     position: center;
 }
-.footer_area{
+.header-area{
     background: #2590b1;
     font-size: 12px;
     margin: 0 auto;
     padding: 0;
-    opacity: 0.6;
+    opacity: 1;
 }
-.footer_area:hover{
-    opacity: 0.9;
+.header-area:hover{
+    opacity: 0.7;
 }
 
 .btn {
@@ -228,4 +236,8 @@ blockquote cite {
 }
 .imageChangingFalse:hover{
     filter: sepia(35%);
+}
+.niceCoverage {
+    background: cornsilk;
+    opacity: 0.5;
 }
